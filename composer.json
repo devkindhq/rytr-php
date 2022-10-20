@@ -1,0 +1,46 @@
+{
+    "name": "devkind/rytr-php",
+    "description": "",
+    "keywords": [
+        "devkind",
+        "rytr-php",
+        "api"
+    ],
+    "homepage": "https://github.com/devkind/rytr-php",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Devkind Developer",
+            "email": "backend@devkind.com.au",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "guzzlehttp/guzzle": "^6.2",
+        "symfony/var-dumper": "*",
+        "nesbot/carbon": "^1.26.3 || ^2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Devkind\\RytrPhp\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Devkind\\RytrPhp\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
