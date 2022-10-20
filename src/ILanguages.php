@@ -5,7 +5,7 @@ namespace Devkind\RytrPhp;
 /**
  * Languages interface
  */
-interface Languages
+interface ILanguages
 {
     /**
      * Our list of valid Languages.

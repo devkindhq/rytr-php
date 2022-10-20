@@ -1052,7 +1052,7 @@ $endpoint->generate(
 
 #### Rewrite With Keywords
 
-Rewrite your existing content to include more keywords and boost your search engine rankings.
+Rewrite your existing content to include more keywords and boost your search tone rankings.
 
 ```php
 /** @var \Devkind\RytrPhp\Endpoints\RewriteWithKeywords */

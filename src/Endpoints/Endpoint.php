@@ -20,12 +20,15 @@ use Devkind\RytrPhp\Rytr as RytrPhp;
 class Endpoint implements Endpoints
 {
 
+    /** @var array */
+    protected array $payload = [];
+
     /** @var string $language */
     protected $language = 'en';
 
-
     /** @var string $toneId */
-    protected string $tone;
+    protected $tone = '605820c030f7b1000c1c4f89';
+
 
     /** @var string $useCaseId */
     protected string $useCaseId;
@@ -45,8 +48,6 @@ class Endpoint implements Endpoints
     /** @var string $creativityLevel */
     protected string $creativityLevel;
     
-
-
 
     /** @var RytrPhp $client */
     protected $client;
@@ -101,16 +102,15 @@ class Endpoint implements Endpoints
     /**
      * Get the value of language
      */
-    public function request($endpoint, $parameters)
+    public function request(string $method, string $endpoint, string $parameters)
     {
-        $stream = Utils::streamFor($parameters);
+        $stream = $parameters == '[]' ? '' : Utils::streamFor($parameters);
 
         $request = $this->client->request(
-            'POST',
+            $method,
             $this->getUrl($endpoint),
             ['body' => $stream]
         );
-
 
         $data = json_decode($request->getBody()->getContents(), true);
         return  $data;
@@ -122,7 +122,7 @@ class Endpoint implements Endpoints
      */
     public function getUrl($endpoint)
     {
-        return $endpoint . '?language=' . $this->getLanguage() . '&engine=' . $this->getEngine();
+        return $endpoint . '?language=' . $this->getLanguage()  ;
     }
 
     /**
@@ -134,11 +134,11 @@ class Endpoint implements Endpoints
     }
 
     /**
-     * Get the value of engine
+     * Get the value of tone
      */
-    public function getEngine()
+    public function getTone()
     {
-        return $this->engine;
+        return $this->tone;
     }
 
     /**
@@ -154,15 +154,15 @@ class Endpoint implements Endpoints
     }
 
     /**
-     * set the value of engine
+     * set the value of tone
      */
-    public function setEngine($value = 'economy')
+    public function setTone($value = 'economy')
     {
         if(!in_array($value, ['economy', 'business'])){
             throw new InvalidArgumentException("Invalid language given, language could be one of ". implode(', ', ['economy', 'business']));
         }
 
-        $this->engine = $value;
+        $this->tone = $value;
         return;
     }
 
@@ -179,7 +179,7 @@ class Endpoint implements Endpoints
             throw new \InvalidArgumentException(implode(",", array_diff($this->getRequiredParameters(), array_keys($payload))) . "are missing in the payload");
         }
 
-        $this->request($this->getEndpoint(), json_encode($payload));
+        $this->request('GET', $this->getEndpoint(), json_encode($payload));
     }
 
     /**

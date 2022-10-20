@@ -5,7 +5,7 @@ namespace Devkind\RytrPhp;
 /**
  * Tones interface
  */
-interface Tones
+interface ITones
 {
     /**
      * Our list of valid Tones.

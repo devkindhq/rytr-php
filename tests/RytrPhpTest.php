@@ -2,7 +2,7 @@
 
 namespace Devkind\RytrPhp\Tests;
 
-use Devkind\RytrPhp\Endpoints\GoogleAds;
+use Devkind\RytrPhp\Endpoints\Tones;
 use Devkind\RytrPhp\Rytr as RytrPhp;
 use PHPUnit\Framework\TestCase;
 use RuntimeException;
@@ -15,9 +15,11 @@ final class RytrPhpTest extends TestCase
     public function rytr_phpis_initialized_properly(): void
     {
         $object  =  new RytrPhp('test');
-        $this->assertTrue(get_class($object->GoogleAds) == GoogleAds::class);
-        $this->assertTrue($object->GoogleAds->getLanguage() == 'en');
-        $this->assertTrue($object->getRoot() == 'api.rytr.com');
+
+        $this->assertTrue(get_class($object->Tones) == Tones::class);
+
+        $this->assertTrue($object->Tones->getLanguage() == 'en');
+        $this->assertTrue($object->getRoot() == 'api.rytr.me');
     }
 
 
@@ -27,9 +29,9 @@ final class RytrPhpTest extends TestCase
     public function rytr_phpis_initialized_properly_using_make(): void
     {
         $object  =  RytrPhp::make('test');
-        $this->assertTrue(get_class($object->GoogleAds) == GoogleAds::class);
-        $this->assertTrue($object->GoogleAds->getLanguage() == 'en');
-        $this->assertTrue($object->getRoot() == 'api.rytr.com');
+        $this->assertTrue(get_class($object->Tones) == Tones::class);
+        $this->assertTrue($object->Tones->getLanguage() == 'en');
+        $this->assertTrue($object->getRoot() == 'api.rytr.me');
     }
 
 
@@ -40,7 +42,7 @@ final class RytrPhpTest extends TestCase
     {
         try {
             $object  =  new RytrPhp('test123');
-            $this->assertTrue(get_class($object->GoogleAd) == GoogleAds::class);
+            $this->assertTrue(get_class($object->Tone) == Tones::class);
         } catch (\Throwable $th) {
             $this->assertTrue(get_class($th) == RuntimeException::class);
         }
@@ -53,9 +55,9 @@ final class RytrPhpTest extends TestCase
     {
         try {
             $object  =  new RytrPhp('test123');
-            /** @var \Devkind\RytrPhp\Endpoints\GoogleAds */
-            $endpoint = $object->GoogleAds;
-            $this->assertTrue(is_array($endpoint->generate('test', 'test', 'test')));
+            /** @var \Devkind\RytrPhp\Endpoints\Tones */
+            $endpoint = $object->Tones;
+            $this->assertTrue(is_array($endpoint->generate()));
         } catch (\Throwable $th) {
             $this->assertTrue(get_class($th) == \GuzzleHttp\Exception\ClientException::class);
         }
@@ -67,9 +69,9 @@ final class RytrPhpTest extends TestCase
     public function exceptionIsThrownInCaseOfInvalidPayloadGiven(): void
     {
         try {
-            $object  =  new RytrPhp('test123');
-            /** @var \Devkind\RytrPhp\Endpoints\GoogleAds */
-            $endpoint = $object->GoogleAds;
+            $object  =  new RytrPhp('test');
+            /** @var \Devkind\RytrPhp\Endpoints\Tones */
+            $endpoint = $object->Tones;
             $this->assertTrue(is_array($endpoint->get()));
         } catch (\Throwable $th) {
             $this->assertTrue(get_class($th) == \InvalidArgumentException::class);
@@ -79,92 +81,16 @@ final class RytrPhpTest extends TestCase
     /**
      * @test
      */
-    public function exceptionIsThrownInCaseOfInvalidCredientialsV3(): void
+    public function exceptionIsThrownInCaseOfInvalidPayloadGiven1(): void
     {
         try {
-            $object  =  new RytrPhp('test123');
-            /** @var \Devkind\RytrPhp\Endpoints\GoogleAds */
-            $endpoint = $object->GoogleAds;
-            $array = $endpoint->setProductName('test')
-                ->setProductDescription('test')
-                ->setSearchTerm('test')
-                ->get();
-            $this->assertTrue(is_array($array));
+            $object  =  new RytrPhp('test');
+            /** @var \Devkind\RytrPhp\Endpoints\Tones */
+            $endpoint = $object->Tones->generate();
+            $this->assertTrue(is_array($endpoint));
         } catch (\Throwable $th) {
             $this->assertTrue(get_class($th) == \GuzzleHttp\Exception\ClientException::class);
         }
-    }
-
-    /**
-     * @test
-     */
-    public function exceptionIsThrownInCaseOfInvalidCredientialsV4(): void
-    {
-        try {
-            $object  =  new RytrPhp('test123');
-            /** @var \Devkind\RytrPhp\Endpoints\GoogleAds */
-            $endpoint = $object->GoogleAds;
-            $array = $endpoint->setPayload([
-                "product_name" => 'test',
-                "product_description" => 'test',
-                "search_term" => 'test',
-            ])->get();
-            $this->assertTrue(is_array($array));
-        } catch (\Throwable $th) {
-            $this->assertTrue(get_class($th) == \GuzzleHttp\Exception\ClientException::class);
-        }
-    }
-
-    /**
-     * @test
-     */
-    public function exceptionIsThrownInCaseOfMissingParameter(): void
-    {
-        try {
-            $object  =  new RytrPhp('test123');
-            /** @var \Devkind\RytrPhp\Endpoints\GoogleAds */
-            $endpoint = $object->GoogleAds;
-            $array = $endpoint->setProductName('test')
-                ->setProductDescription('test')
-                ->get();
-            $this->assertTrue(is_array($array));
-        } catch (\Throwable $th) {
-            $this->assertTrue(get_class($th) == \InvalidArgumentException::class);
-        }
-    }
-
-    /**
-     * @test
-     */
-    public function exceptionIsThrownInCaseOfInvalidCredientialsV2(): void
-    {
-        try {
-            $object  =  new RytrPhp('test123');
-            /** @var \Devkind\RytrPhp\Endpoints\GoogleAds */
-            $endpoint = $object->GoogleAds;
-            $this->assertTrue(is_array($endpoint->get([
-                "product_name" => 'test',
-                "product_description" => 'test',
-                "search_term" => 'test',
-            ])));
-        } catch (\Throwable $th) {
-            $this->assertTrue(get_class($th) == \GuzzleHttp\Exception\ClientException::class);
-        }
-    }
-
-    /**
-     * @test
-     */
-    public function exceptionIsThrownInCaseOfBlankPayloadGiven(): void
-    {
-        try {
-            $object  =  new RytrPhp('test123');
-            /** @var \Devkind\RytrPhp\Endpoints\GoogleAds */
-            $endpoint = $object->GoogleAds;
-            $this->assertTrue(is_array($endpoint->get([])));
-        } catch (\Throwable $th) {
-            $this->assertTrue(get_class($th) == \InvalidArgumentException::class);
-        }
-    }
+    }  
     
 }

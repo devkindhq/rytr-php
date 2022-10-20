@@ -17,11 +17,14 @@ class Rytr extends Client implements Endpoints
     /** @var string $base */
     protected $base = '';
 
+    /** @var string $base */
+    protected $token = '';
+
     /** @var string $root */
     protected $root = '';
 
     /**
-     * Machship constructor.
+     * Rytr constructor.
      *
      * @param string $token
      * @param string $root
@@ -30,15 +33,13 @@ class Rytr extends Client implements Endpoints
     {
         $this->root = Util::normalizeDomain(static::HOST);
         $base_uri = "https://{$this->root}";
+        
+        $this->token = $token;
 
         $this->setBase($base);
         parent::__construct([
             'base_uri' => $base_uri,
-            'headers' => [
-                'x-api-key' => $token,
-                'Accept' => 'application/json',
-                'Content-Type' => 'application/json; charset=utf-8;',
-            ],
+            'headers' => $this->getHeaders()
         ]);
     }
 
@@ -46,13 +47,24 @@ class Rytr extends Client implements Endpoints
      * @param string $root
      * @param string $token
      *
-     * @return Machship
+     * @return Rytr
      */
     public static function make($token, $base = 'v1')
     {
         return new static($token, $base);
     }
 
+    /**
+     * @return string
+     */
+    public function getHeaders()
+    {
+        return [
+                'Authentication' => 'Bearer '.  $this->token,
+                'Accept' => 'application/json',
+                'Content-Type' => 'application/json; charset=utf-8;',
+            ];
+    }
     /**
      * @return string
      */
