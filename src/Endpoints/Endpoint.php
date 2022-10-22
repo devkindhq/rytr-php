@@ -4,7 +4,6 @@ namespace Devkind\RytrPhp\Endpoints;
 
 use GuzzleHttp\Psr7\Utils;
 use InvalidArgumentException;
-use Devkind\RytrPhp\Endpoints;
 
 use Devkind\RytrPhp\Rytr as RytrPhp;
 
@@ -14,10 +13,10 @@ use Devkind\RytrPhp\Rytr as RytrPhp;
  *
  * @mixin RytrPhp
  *
- * @property string endpoint
- * @property array ids
+ * @property array payload
+ * @property RytrPhp client
  */
-class Endpoint implements Endpoints
+class Endpoint  
 {
 
     /** @var array */
@@ -61,14 +60,6 @@ class Endpoint implements Endpoints
     {
         if (method_exists($this, $method)) {
             return $method();
-        }
-
-        if (in_array($method, array_keys(static::ENDPOINTS))) {
-            if ($parameters === []) {
-                throw new InvalidArgumentException('Calling ' . $method . ' from ' . $this->client->api . ' requires an id');
-            }
-
-            return $this->client->$method(...$parameters);
         }
 
         return $this->client->$method(...$parameters);

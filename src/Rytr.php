@@ -5,14 +5,12 @@ namespace Devkind\RytrPhp;
 use GuzzleHttp\Client;
 use InvalidArgumentException;
 use Devkind\RytrPhp\Util;
-use Devkind\RytrPhp\Endpoints\Endpoint;
 
 
-class Rytr extends Client implements Endpoints
+class Rytr extends Client
 {
 
     public const HOST = 'https://api.rytr.me/';
-
 
     /** @var string $base */
     protected $base = '';

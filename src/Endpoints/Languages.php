@@ -23,7 +23,7 @@ final class Languages extends Endpoint
     {
         return $this->request(
             self::METHOD,
-            self::ENDPOINT . (strlen($identifier) == 0 ? '' : '/'. $identifier),
+            self::ENDPOINT . (strlen($identifier) == 0 ? '' : '/' . $identifier),
             $this->toString()
         );
     }
