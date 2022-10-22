@@ -55,14 +55,14 @@ class Rytr extends Client implements Endpoints
     }
 
     /**
-     * @return string
+     * @return array
      */
     public function getHeaders()
     {
         return [
                 'Authentication' => 'Bearer '.  $this->token,
                 'Accept' => 'application/json',
-                'Content-Type' => 'application/json; charset=utf-8;',
+                'Content-Type' => 'application/json',
             ];
     }
     /**
@@ -101,6 +101,11 @@ class Rytr extends Client implements Endpoints
     public function __get($endpoint)
     {
         $className = "Devkind\\RytrPhp\\Endpoints\\" . ucfirst(Util::camelize($endpoint));
+        if (class_exists($className)) {
+            return new $className($this);
+        }
+
+        $className = "Devkind\\RytrPhp\\Endpoints\\UseCases\\" . $endpoint;
         if (class_exists($className)) {
             return new $className($this);
         }
