@@ -76,8 +76,8 @@ abstract class AbstractUseCase extends Endpoint
      */
     public function setLanguage($value = 'en')
     {
-        if(!in_array($value, ILanguages::LANGUAGES)){
-            throw new InvalidArgumentException("Invalid language given, language could be one of ". implode(', ', ILanguages::LANGUAGES));
+        if (!in_array($value, ILanguages::LANGUAGES)) {
+            throw new InvalidArgumentException("Invalid language given, language could be one of " . implode(', ', ILanguages::LANGUAGES));
         }
         $this->language = $value;
         return;
@@ -88,8 +88,8 @@ abstract class AbstractUseCase extends Endpoint
      */
     public function setTone($value = 'economy')
     {
-        if(!in_array($value, ['economy', 'business'])){
-            throw new InvalidArgumentException("Invalid language given, language could be one of ". implode(', ', ['economy', 'business']));
+        if (!in_array($value, ['economy', 'business'])) {
+            throw new InvalidArgumentException("Invalid language given, language could be one of " . implode(', ', ['economy', 'business']));
         }
 
         $this->tone = $value;
@@ -129,7 +129,7 @@ abstract class AbstractUseCase extends Endpoint
 
     /**
      * Get the value of variations
-     */ 
+     */
     public function getVariations()
     {
         return $this->variations;
@@ -139,7 +139,7 @@ abstract class AbstractUseCase extends Endpoint
      * Set the value of variations
      *
      * @return  self
-     */ 
+     */
     public function setVariations($variations)
     {
         $this->variations = $variations;
@@ -149,17 +149,17 @@ abstract class AbstractUseCase extends Endpoint
 
     /**
      * Get the value of userId
-     */ 
+     */
     public function getUserId()
     {
-        return $this->userId ?? random_int(99,9999);
+        return $this->userId ?? random_int(99, 9999);
     }
 
     /**
      * Set the value of userId
      *
      * @return  self
-     */ 
+     */
     public function setUserId($userId)
     {
         $this->userId = $userId;
@@ -169,7 +169,7 @@ abstract class AbstractUseCase extends Endpoint
 
     /**
      * Get the value of format
-     */ 
+     */
     public function getFormat()
     {
         return $this->format;
@@ -179,7 +179,7 @@ abstract class AbstractUseCase extends Endpoint
      * Set the value of format
      *
      * @return  self
-     */ 
+     */
     public function setFormat($format)
     {
         $this->format = $format;
@@ -189,7 +189,7 @@ abstract class AbstractUseCase extends Endpoint
 
     /**
      * Get the value of creativityLevel
-     */ 
+     */
     public function getCreativityLevel()
     {
         return $this->creativityLevel;
@@ -199,7 +199,7 @@ abstract class AbstractUseCase extends Endpoint
      * Set the value of creativityLevel
      *
      * @return  self
-     */ 
+     */
     public function setCreativityLevel($creativityLevel)
     {
         $this->creativityLevel = $creativityLevel;
@@ -219,17 +219,15 @@ abstract class AbstractUseCase extends Endpoint
             return [
                 "languageId" => $this->getLanguage(),
                 "toneId" => $this->getTone(),
-                "useCaseId" =>$this->getUseCaseId(),
+                "useCaseId" => $this->getUseCaseId(),
                 "inputContexts" => $this->getInputContexts(),
-                "variations"=> $this->getVariations(),
+                "variations" => $this->getVariations(),
                 "userId" => $this->getUserId(),
                 "format" => $this->getFormat(),
                 "creativityLevel" => $this->getCreativityLevel()
             ];
         } catch (\Throwable $th) {
-            var_export($th->getTraceAsString()); die;
-            throw new \InvalidArgumentException(  $th->getMessage());
+            throw new \InvalidArgumentException($th->getMessage());
         }
     }
-
 }
