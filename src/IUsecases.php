@@ -34,7 +34,6 @@ interface IUsecases
                         "_id" => "60a40cf5da9d76000ccc2829"
                     ]
                 ],
-                "image" => "1626880951898.svg",
                 "variants" => 1,
                 "info" => "",
                 "createdAt" => "2021-05-18T18:52:37.355Z",
@@ -68,7 +67,6 @@ interface IUsecases
                         "_id" => "612772a98e8d7c56540a5be1"
                     ]
                 ],
-                "image" => "1620388926083.svg",
                 "info" => "",
                 "createdAt" => "2021-03-22T07:53:22.873Z",
                 "caption" => "Write articles based on section topics & headlines",
@@ -96,7 +94,6 @@ interface IUsecases
                         "_id" => "61e0224822cc129b33031a81"
                     ]
                 ],
-                "image" => "1642147569659.svg",
                 "variants" => 1,
                 "info" => "",
                 "isCustom" => false,
@@ -120,7 +117,6 @@ interface IUsecases
                         "_id" => "6062df03e20e7d000c15609c"
                     ]
                 ],
-                "image" => "1642148057551.svg",
                 "info" => "",
                 "createdAt" => "2021-03-30T08:19:15.825Z",
                 "caption" => "Write a short pitch based on your product or business idea",
@@ -157,7 +153,6 @@ interface IUsecases
                         "_id" => "61e1167527174a50fdcb55e5"
                     ]
                 ],
-                "image" => "1642148045472.svg",
                 "variants" => 2,
                 "info" => "",
                 "isCustom" => false,
@@ -183,7 +178,6 @@ interface IUsecases
                         "_id" => "61e01c2d5b9c5f0d9d79531a"
                     ]
                 ],
-                "image" => "1642079410999.svg",
                 "variants" => 3,
                 "info" => "",
                 "isCustom" => false,
@@ -209,7 +203,6 @@ interface IUsecases
                         "_id" => "60d19b16d63485000cab8c16"
                     ]
                 ],
-                "image" => "1624352425331.svg",
                 "variants" => 1,
                 "info" => "",
                 "createdAt" => "2021-06-22T08:11:02.649Z",
@@ -235,7 +228,6 @@ interface IUsecases
                         "_id" => "60d1ac3e548c6b000c8fce5c"
                     ]
                 ],
-                "image" => "1624361915466.svg",
                 "variants" => 1,
                 "info" => "",
                 "createdAt" => "2021-06-22T09:24:14.041Z",
@@ -263,7 +255,6 @@ Have a great day!",
                         "_id" => "60572a629bdd4272b8fe3589"
                     ]
                 ],
-                "image" => "1620394292676.svg",
                 "createdAt" => "2021-03-21T11:13:38.684Z",
                 "info" => "",
                 "caption" => "Turn a few key points into a ready to send email",
@@ -298,7 +289,6 @@ Have a great day!",
                         "_id" => "60572a629bdd4272b8fe3587"
                     ]
                 ],
-                "image" => "1620394374236.svg",
                 "info" => "Please review and comply with  Facebook ad terms ,  Google ad terms ,  LinkedIn ad terms.",
                 "createdAt" => "2021-03-21T11:13:38.328Z",
                 "caption" => "Generate Ad copies for your product or brand",
@@ -344,7 +334,6 @@ Have a great day!",
                         "_id" => "6163f55a1d5d06c1e9689ed7"
                     ]
                 ],
-                "image" => "1620394374236.svg",
                 "variants" => 3,
                 "info" => "Please review and comply with  Google ad terms .",
                 "createdAt" => "2021-10-11T08:27:06.573Z",
@@ -376,7 +365,6 @@ Have a great day!",
                         "_id" => "60ba74d5c4d770000c3702a9"
                     ]
                 ],
-                "image" => "1620394521390.svg",
                 "info" => "",
                 "createdAt" => "2021-03-22T09:54:04.382Z",
                 "caption" => "Generate interview questions for job roles, podcasts, & shows",
@@ -402,7 +390,6 @@ Have a great day!",
                         "_id" => "60586b31cdebbb000c21058e"
                     ]
                 ],
-                "image" => "1620394592243.svg",
                 "info" => "",
                 "createdAt" => "2021-03-22T10:02:25.080Z",
                 "caption" => "Write a job description based on the role",
@@ -447,7 +434,6 @@ Have a great day!",
                         "_id" => "60ba3e48a3e0c9000ce7fd0b"
                     ]
                 ],
-                "image" => "1620394666021.svg",
                 "info" => "",
                 "createdAt" => "2021-03-22T06:11:49.583Z",
                 "caption" => "Write sections of website based on its features",
@@ -475,7 +461,6 @@ Have a great day!",
                         "_id" => "60ed7113732a5b000cf99e8f"
                     ]
                 ],
-                "image" => "1626175421044.svg",
                 "variants" => 1,
                 "info" => "",
                 "createdAt" => "2021-07-13T10:55:15.682Z",
@@ -499,7 +484,6 @@ Have a great day!",
                         "_id" => "6062d819be972a000c6a05a4"
                     ]
                 ],
-                "image" => "1620394822429.svg",
                 "info" => "",
                 "createdAt" => "2021-03-30T07:49:45.494Z",
                 "caption" => "Generate ideas & intro text for your social media posts",
@@ -534,7 +518,6 @@ Have a great day!",
                         "_id" => "60ba0f9ea3e0c9000ce7f5e1"
                     ]
                 ],
-                "image" => "1620395036821.svg",
                 "info" => "",
                 "createdAt" => "2021-03-22T06:02:31.498Z",
                 "caption" => "Write brief description for your product or feature",
@@ -575,7 +558,6 @@ Have a great day!",
                         "_id" => "60bb65ca12ba07000cdc8f66"
                     ]
                 ],
-                "image" => "1622904728819.svg",
                 "variants" => 2,
                 "info" => "",
                 "createdAt" => "2021-06-05T11:53:46.697Z",
@@ -599,7 +581,6 @@ Have a great day!",
                         "_id" => "60633095de064b000c8f5cc9"
                     ]
                 ],
-                "image" => "1620395140363.svg",
                 "info" => "",
                 "createdAt" => "2021-03-30T14:07:17.092Z",
                 "caption" => "Write introduction & about me bios for your profile",
@@ -627,7 +608,6 @@ Have a great day!",
                         "_id" => "611e2a98045b4643d50242cf"
                     ]
                 ],
-                "image" => "1629480192520.svg",
                 "variants" => 1,
                 "info" => "",
                 "createdAt" => "2021-08-19T09:55:36.126Z",
@@ -653,7 +633,6 @@ Have a great day!",
                         "_id" => "611e40d404b47f5c77297a38"
                     ]
                 ],
-                "image" => "1629480298194.svg",
                 "variants" => 1,
                 "info" => "",
                 "createdAt" => "2021-08-19T11:30:28.309Z",
@@ -677,7 +656,6 @@ Have a great day!",
                         "_id" => "60583ac98c0a4a000c69c970"
                     ]
                 ],
-                "image" => "1620395291088.svg",
                 "info" => "",
                 "createdAt" => "2021-03-22T06:35:53.193Z",
                 "caption" => "Generate SEO-friendly meta description for the page",
@@ -703,7 +681,6 @@ Have a great day!",
                         "_id" => "60583a058c0a4a000c69c96e"
                     ]
                 ],
-                "image" => "1620395299663.svg",
                 "info" => "",
                 "createdAt" => "2021-03-22T06:32:37.680Z",
                 "caption" => "Generate SEO-friendly meta title for the page",
@@ -731,7 +708,6 @@ Have a great day!",
                         "_id" => "605838118c0a4a000c69c969"
                     ]
                 ],
-                "image" => "1633945477670.svg",
                 "variants" => 3,
                 "info" => "",
                 "createdAt" => "2021-10-11T09:44:39.181Z",
@@ -757,7 +733,6 @@ Have a great day!",
                         "_id" => "60e6f4316ab0b5000c848c52"
                     ]
                 ],
-                "image" => "1625763926572.svg",
                 "variants" => 1,
                 "info" => "",
                 "createdAt" => "2021-07-08T12:48:49.119Z",
@@ -783,7 +758,6 @@ Have a great day!",
                         "_id" => "60cdad891d63cb00138240d4"
                     ]
                 ],
-                "image" => "1624101199983.svg",
                 "variants" => 1,
                 "info" => "",
                 "createdAt" => "2021-06-19T08:40:41.422Z",
@@ -807,7 +781,6 @@ Have a great day!",
                         "_id" => "605838118c0a4a000c69c969"
                     ]
                 ],
-                "image" => "1620395466076.svg",
                 "info" => "",
                 "createdAt" => "2021-03-22T06:24:17.103Z",
                 "caption" => "Write short tagline for your product or brand",
@@ -842,7 +815,6 @@ Have a great day!",
                         "_id" => "607c7ae91ebe15000cbbc7b1"
                     ]
                 ],
-                "image" => "1620395541790.svg",
                 "info" => "",
                 "createdAt" => "2021-04-18T18:31:05.893Z",
                 "caption" => "Generate review for people, product, or service",
@@ -868,7 +840,6 @@ Have a great day!",
                         "_id" => "6092917aa9c7620013304f44"
                     ]
                 ],
-                "image" => "1620395669080.svg",
                 "info" => "",
                 "createdAt" => "2021-05-05T12:37:14.820Z",
                 "caption" => "Append a few words at the end of a given text",
@@ -896,7 +867,6 @@ Have a great day!",
                         "_id" => "60928e45a9c7620013304f12"
                     ]
                 ],
-                "image" => "1646380260735.svg",
                 "variants" => 1,
                 "info" => "",
                 "isCustom" => false,
@@ -919,7 +889,6 @@ Have a great day!",
                         "_id" => "60928e45a9c7620013304f12"
                     ]
                 ],
-                "image" => "1620395719991.svg",
                 "info" => "",
                 "createdAt" => "2021-05-05T12:23:33.330Z",
                 "caption" => "Add a few words to increase length of a given text",
@@ -947,7 +916,6 @@ Have a great day!",
                         "_id" => "60cdd8b61d63cb001382a391"
                     ]
                 ],
-                "image" => "1624121592492.svg",
                 "variants" => 1,
                 "info" => "",
                 "createdAt" => "2021-06-19T11:44:54.136Z",
@@ -973,7 +941,6 @@ Have a great day!",
                         "_id" => "60b877a110f2fb000cb004ec"
                     ]
                 ],
-                "image" => "1623045282963.svg",
                 "variants" => 1,
                 "info" => "",
                 "createdAt" => "2021-06-03T06:33:05.046Z",
@@ -997,7 +964,6 @@ Have a great day!",
                         "_id" => "60928476a9c7620013304e8a"
                     ]
                 ],
-                "image" => "1620395806887.svg",
                 "info" => "",
                 "createdAt" => "2021-05-05T11:41:42.049Z",
                 "caption" => "Paraphrase a given short text",
@@ -1023,7 +989,6 @@ Have a great day!",
                         "_id" => "60928752a9c7620013304ea2"
                     ]
                 ],
-                "image" => "1620395857076.svg",
                 "info" => "",
                 "createdAt" => "2021-05-05T11:53:54.118Z",
                 "caption" => "Reduce length of a given text to make it succinct & clearer",
@@ -1049,7 +1014,6 @@ Have a great day!",
                         "_id" => "605856eec2cdaa000c2a7966"
                     ]
                 ],
-                "image" => "1620394137595.svg",
                 "info" => "",
                 "createdAt" => "2021-03-22T08:35:58.114Z",
                 "caption" => "Write short description for your YouTube channel",
@@ -1075,7 +1039,6 @@ Have a great day!",
                         "_id" => "6058536ec2cdaa000c2a795f"
                     ]
                 ],
-                "image" => "1620394174806.svg",
                 "info" => "",
                 "createdAt" => "2021-03-22T08:21:02.582Z",
                 "caption" => "Write short description for your YouTube video",
@@ -1101,7 +1064,6 @@ Have a great day!",
                         "_id" => "60584ffdc2cdaa000c2a7958"
                     ]
                 ],
-                "image" => "1620394185911.svg",
                 "info" => "",
                 "createdAt" => "2021-03-22T08:06:21.281Z",
                 "caption" => "Generate video ideas based on keywords & topics",

@@ -120,7 +120,7 @@ abstract class AbstractUseCase extends Endpoint
     /**
      * Accessor for getting Required Parameters attribute
      *
-     * @return array
+     * @return string
      */
     public function getMethod(): string
     {
@@ -207,6 +207,38 @@ abstract class AbstractUseCase extends Endpoint
         return $this;
     }
 
+    public function get(?array $payload = [])
+    {
+        $payload = count($payload) == 0 ? $this->payload : $payload;
+        $payload = count($payload) == 0 ? $this->getInputContexts() : $payload;
+
+        if (is_null($payload) || count($payload) == 0) {
+            throw new \InvalidArgumentException("Payload is required to make a call.");
+        }
+
+        $payload = $this->makePayload($payload);
+
+        if (count(array_intersect_key(array_flip($this->getParams()), $payload['inputContexts'])) !== count($this->getParams())) {
+            throw new \InvalidArgumentException(implode(",", array_diff($this->getParams(), array_keys($payload))) . "are missing in the payload");
+        }
+
+        return $this->request(
+            $this->getMethod(),
+            $this->getEndpoint(),
+            json_encode($payload)
+        );
+    }
+
+    private function makePayload(array $value)
+    {
+        $payload = $this->toArray();
+
+        foreach (array_keys($payload) as $key) {
+            $value[$key] = isset($value[$key]) ? $value[$key] : $payload[$key];
+        }
+
+        return $value;         
+    }
 
     /**
      * Array representation of this endpoint

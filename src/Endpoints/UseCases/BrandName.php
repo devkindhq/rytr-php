@@ -11,7 +11,7 @@ namespace Devkind\RytrPhp\Endpoints\UseCases;
 final class BrandName extends AbstractUseCase
 {
     public const USECASEID = '61e0224822cc129b33031a80';
-    public const PARAMS = ['brand_description'];
+    public const PARAMS = ['BRAND_DESCRIPTION_LABEL'];
 
     /** @var array */
     protected array $payload =[];
@@ -25,7 +25,7 @@ final class BrandName extends AbstractUseCase
     public function generate(string $brand_description)
     {
         $this->brand_description = $brand_description;
-        $this->request(parent::METHOD, self::ENDPOINT, $this->toString());
+        return $this->request(parent::METHOD, self::ENDPOINT, $this->toString());
     }
 
     /**
@@ -33,9 +33,9 @@ final class BrandName extends AbstractUseCase
      *
      * @return string
      */
-    public function getBrandDescription(): string
+    public function getBrandDescription(): ?string
     {
-        return $this->brand_description;
+        return $this->brand_description ?? null;
     }
 
     /**

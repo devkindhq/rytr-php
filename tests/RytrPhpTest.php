@@ -18,7 +18,6 @@ final class RytrPhpTest extends TestCase
 
         $this->assertTrue(get_class($object->Tones) == Tones::class);
 
-        $this->assertTrue($object->Tones->getLanguage() == 'en');
         $this->assertTrue($object->getRoot() == 'api.rytr.me');
     }
 
@@ -30,7 +29,6 @@ final class RytrPhpTest extends TestCase
     {
         $object  =  RytrPhp::make('test');
         $this->assertTrue(get_class($object->Tones) == Tones::class);
-        $this->assertTrue($object->Tones->getLanguage() == 'en');
         $this->assertTrue($object->getRoot() == 'api.rytr.me');
     }
 
@@ -42,7 +40,7 @@ final class RytrPhpTest extends TestCase
     {
         try {
             $object  =  new RytrPhp('test123');
-            $this->assertTrue(get_class($object->Tone) == Tones::class);
+            $this->assertTrue(get_class($object->Tones) == Tones::class);
         } catch (\Throwable $th) {
             $this->assertTrue(get_class($th) == RuntimeException::class);
         }
@@ -85,12 +83,24 @@ final class RytrPhpTest extends TestCase
     {
         try {
             $object  =  new RytrPhp('test');
-            /** @var \Devkind\RytrPhp\Endpoints\Tones */
-            $endpoint = $object->Tones->generate();
+            /** @var \Devkind\RytrPhp\Endpoints\UseCases\BrandName */
+            $endpoint = $object->BrandName;
+            
+            $endpoint = $endpoint
+            ->setBrandDescription("google")
+            ->setVariations(10)
+            ->setUserId(100)
+            ->setFormat('html')
+            ->setCreativityLevel('medium')
+            ->get();
             $this->assertTrue(is_array($endpoint));
         } catch (\Throwable $th) {
+            var_export($th->getMessage()); echo PHP_EOL; die;
             $this->assertTrue(get_class($th) == \GuzzleHttp\Exception\ClientException::class);
         }
     }  
     
 }
+
+
+
