@@ -1,61 +1,63 @@
 <?php
 
 namespace Devkind\RytrPhp\Endpoints\UseCases;
- 
+
 /**
- * Endpoint class to get Aida from WriteSonic
- *
- *
- * <b> Tried and tested formula of Attention, Interest, Desire, Action that is proven to convert. </b>
+ * Endpoint class to get Generate unique names for your product or brand from WriteSonic
+ * Use AI to come up with creative, quirky, and catchy names for your brand or business.
  */
 final class BrandName extends AbstractUseCase
 {
-    public const USECASEID = '61e0224822cc129b33031a80';
     public const PARAMS = ['BRAND_DESCRIPTION_LABEL'];
-
+    public const USECASEID = '61e0224822cc129b33031a80';
 
     /** @var string */
-    protected string $brand_description;
+    protected string $brandDescription;
 
     /**
      * Generates the content on the basis of required parameters.
      */
-    public function generate(string $brand_description)
+    public function generate(string $brandDescription)
     {
-        $this->brand_description = $brand_description;
+        $this->brandDescription = $brandDescription;
         return $this->request(parent::METHOD, self::ENDPOINT, $this->toString());
     }
 
     /**
-     * Accessor brand_description attribute
+     * Accessor brandDescription attribute
      *
      * @return string
      */
-    public function getBrandDescription(): ?string
+    public function getBrandDescription(): string
     {
-        return $this->brand_description ?? null;
+        return $this->brandDescription;
     }
 
     /**
-     * Setter for payload attribute
+     * Setter brandDescription attribute
      *
      * @return self
      */
-    public function setBrandDescription(string $value): self
+    public function setBrandDescription($value): self
     {
-        $this->brand_description = $value;
+        $this->brandDescription = $value;
         return $this;
     }
 
-
     /**
-     * Accessor for endpoint attribute
+     * JSON representation of this endpoint
      *
-     * @return string
+     * @return array
      */
-    public function getUseCaseId(): string
+    public function getInputContexts(): array
     {
-        return self::USECASEID;
+        try {
+            return [
+               "BRAND_DESCRIPTION_LABEL" => $this->getBrandDescription(),
+            ];
+        } catch (\Throwable $th) {
+            throw new \InvalidArgumentException(explode(":", $th->getMessage())[1] ?? $th->getMessage());
+        }
     }
 
     /**
@@ -69,18 +71,12 @@ final class BrandName extends AbstractUseCase
     }
 
     /**
-     * Array representation of this endpoint
+     * Accessor for getting UseCaseId attribute
      *
-     * @return array
+     * @return string
      */
-    public function getInputContexts(): array
+    public function getUseCaseId(): string
     {
-        try {
-            return [
-                 "BRAND_DESCRIPTION_LABEL" => $this->getBrandDescription(),
-            ];
-        } catch (\Throwable $th) {
-            throw new \InvalidArgumentException(explode(":", $th->getMessage())[1] ?? $th->getMessage());
-        }
+        return self::USECASEID;
     }
 }
