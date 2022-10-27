@@ -6,7 +6,7 @@ namespace Devkind\RytrPhp\Endpoints\UseCases;
  * Endpoint class to get Generate review for people, product, or service from WriteSonic
  * Quickly write candid testimonials and reviews for people and services
  */
-final class TestimonialReviewGenerator extends \AbstractUseCase
+final class TestimonialReviewGenerator extends AbstractUseCase
 {
     public const PARAMS = ['NAME_LABEL', 'REVIEW_TITLE_LABEL'];
     public const USECASEID = '607c7ae91ebe15000cbbc7af';

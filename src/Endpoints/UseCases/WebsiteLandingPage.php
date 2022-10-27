@@ -6,7 +6,7 @@ namespace Devkind\RytrPhp\Endpoints\UseCases;
  * Endpoint class to get Write sections of website based on its features from WriteSonic
  * Generate creative and persuasive copies for sections of your landing page
  */
-final class WebsiteLandingPage extends \AbstractUseCase
+final class WebsiteLandingPage extends AbstractUseCase
 {
     public const PARAMS = ['WEBSITE_NAME_LABEL', 'ABOUT_WEBSITE_LABEL', 'FEATURES_LABEL'];
     public const USECASEID = '605835258c0a4a000c69c962';

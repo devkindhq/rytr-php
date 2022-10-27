@@ -6,7 +6,7 @@ namespace Devkind\RytrPhp\Endpoints\UseCases;
  * Endpoint class to get Write a job description based on the role from WriteSonic
  * Create engaging job descriptions for any position to attract the best candidates
  */
-final class JobDescription extends \AbstractUseCase
+final class JobDescription extends AbstractUseCase
 {
     public const PARAMS = ['JOB_ROLE_LABEL'];
     public const USECASEID = '60586b31cdebbb000c21058d';

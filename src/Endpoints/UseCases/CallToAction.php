@@ -6,7 +6,7 @@ namespace Devkind\RytrPhp\Endpoints\UseCases;
  * Endpoint class to get Generate Call To Actions for your ad, product or landing page from WriteSonic
  * Let AI come up with creative and high converting CTAs for your ads, posts, landing pages, and more!
  */
-final class CallToAction extends \AbstractUseCase
+final class CallToAction extends AbstractUseCase
 {
     public const PARAMS = ['DESCRIPTION_LABEL'];
     public const USECASEID = '61e01c2d5b9c5f0d9d795319';

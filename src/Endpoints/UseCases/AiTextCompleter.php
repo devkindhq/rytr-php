@@ -6,7 +6,7 @@ namespace Devkind\RytrPhp\Endpoints\UseCases;
  * Endpoint class to get Append a few words at the end of a given text from WriteSonic
  * Let AI text completer finish sentences and paragraphs for you
  */
-final class AiTextCompleter extends \AbstractUseCase
+final class AiTextCompleter extends AbstractUseCase
 {
     public const PARAMS = ['INPUT_TEXT_LABEL'];
     public const USECASEID = '6092917aa9c7620013304f43';

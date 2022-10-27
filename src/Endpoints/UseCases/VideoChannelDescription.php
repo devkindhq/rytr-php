@@ -6,7 +6,7 @@ namespace Devkind\RytrPhp\Endpoints\UseCases;
  * Endpoint class to get Write short description for your YouTube channel from WriteSonic
  * Generate a catchy description for your YouTube video channel to get more subscribers
  */
-final class VideoChannelDescription extends \AbstractUseCase
+final class VideoChannelDescription extends AbstractUseCase
 {
     public const PARAMS = ['CHANNEL_PURPOSE_LABEL'];
     public const USECASEID = '605856eec2cdaa000c2a7965';

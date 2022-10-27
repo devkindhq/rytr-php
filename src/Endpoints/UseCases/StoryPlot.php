@@ -6,7 +6,7 @@ namespace Devkind\RytrPhp\Endpoints\UseCases;
  * Endpoint class to get Generate creative plot outline based on story ideas from WriteSonic
  * Quickly write engaging and creative fiction stories using AI
  */
-final class StoryPlot extends \AbstractUseCase
+final class StoryPlot extends AbstractUseCase
 {
     public const PARAMS = ['STORY_IDEA_LABEL'];
     public const USECASEID = '60cdad891d63cb00138240d3';

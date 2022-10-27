@@ -6,7 +6,7 @@ namespace Devkind\RytrPhp\Endpoints\UseCases;
  * Endpoint class to get Generate marketing copies in PAS format from WriteSonic
  * Use Rytr's AI writing tool to create engaging and creative copies based on Problem, Agitate, and Solution copywriting framework.
  */
-final class CopywritingFrameworkPas extends \AbstractUseCase
+final class CopywritingFrameworkPas extends AbstractUseCase
 {
     public const PARAMS = ['PRODUCT_OR_BRAND_DESCRIPTION_LABEL'];
     public const USECASEID = '60d1ac3e548c6b000c8fce5b';

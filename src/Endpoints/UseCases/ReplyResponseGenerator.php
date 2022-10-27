@@ -6,7 +6,7 @@ namespace Devkind\RytrPhp\Endpoints\UseCases;
  * Endpoint class to get Write responses for messages, reviews, emails & more from WriteSonic
  * Let AI write engaging & thoughtful responses to customer reviews, private messages, professional emails, testimonials & more.
  */
-final class ReplyResponseGenerator extends \AbstractUseCase
+final class ReplyResponseGenerator extends AbstractUseCase
 {
     public const PARAMS = ['MESSAGE_LABEL'];
     public const USECASEID = '611e40d404b47fc3a2297a37';

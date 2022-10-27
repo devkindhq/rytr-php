@@ -6,7 +6,7 @@ namespace Devkind\RytrPhp\Endpoints\UseCases;
  * Endpoint class to get Generate ideas and content structure for articles from WriteSonic
  * The easiest way to come up with catchy blog, essay, and article topics and content structures using AI writing assistant
  */
-final class BlogIdeaOutline extends \AbstractUseCase
+final class BlogIdeaOutline extends AbstractUseCase
 {
     public const PARAMS = ['PRIMARY_KEYWORD_LABEL'];
     public const USECASEID = '60a40cf5da9d76000ccc2828';

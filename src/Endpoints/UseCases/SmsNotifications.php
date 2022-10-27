@@ -6,7 +6,7 @@ namespace Devkind\RytrPhp\Endpoints\UseCases;
  * Endpoint class to get Write engaging micro-copies for SMS or app notifications from WriteSonic
  * Generate creative and catchy notifications for your business that brings customers back
  */
-final class SmsNotifications extends \AbstractUseCase
+final class SmsNotifications extends AbstractUseCase
 {
     public const PARAMS = ['CONTEXT_LABEL'];
     public const USECASEID = '6163fe7b1d5d06c1e9693346';

@@ -6,7 +6,7 @@ namespace Devkind\RytrPhp\Endpoints\UseCases;
  * Endpoint class to get Write introduction & about me bios for your profile from WriteSonic
  * Write creative and engaging bios for your social media handles including LinkedIn, Instagram, Twitter, Facebook, and more!
  */
-final class SocialMediaBio extends \AbstractUseCase
+final class SocialMediaBio extends AbstractUseCase
 {
     public const PARAMS = ['ABOUT_YOU_LABEL'];
     public const USECASEID = '60633095de064b000c8f5cc8';

@@ -6,7 +6,7 @@ namespace Devkind\RytrPhp\Endpoints\UseCases;
  * Endpoint class to get Correct grammar and improve the readability of text from WriteSonic
  * Use Rytr's AI content writing assistant to simplify your writing and make it mistake-free. Best Grammarly alternative.
  */
-final class GrammarCheckerAndReadabilityImprover extends \AbstractUseCase
+final class GrammarCheckerAndReadabilityImprover extends AbstractUseCase
 {
     public const PARAMS = ['INPUT_TEXT_LABEL'];
     public const USECASEID = '60cdd8b61d63cb001382a390';

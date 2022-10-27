@@ -6,7 +6,7 @@ namespace Devkind\RytrPhp\Endpoints\UseCases;
  * Endpoint class to get Paraphrase a given short text from WriteSonic
  * Easily rephrase any text into more engaging and catchy variations using Rytr's AI copywriting assistant
  */
-final class TextRephraser extends \AbstractUseCase
+final class TextRephraser extends AbstractUseCase
 {
     public const PARAMS = ['INPUT_TEXT_LABEL'];
     public const USECASEID = '60928476a9c7620013304e89';

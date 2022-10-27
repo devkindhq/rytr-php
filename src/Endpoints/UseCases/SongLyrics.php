@@ -6,7 +6,7 @@ namespace Devkind\RytrPhp\Endpoints\UseCases;
  * Endpoint class to get Generate short lyrics based on a song idea from WriteSonic
  * Write creative and original lyrics using Rytr's AI-powered song generator
  */
-final class SongLyrics extends \AbstractUseCase
+final class SongLyrics extends AbstractUseCase
 {
     public const PARAMS = ['SONG_IDEA_LABEL'];
     public const USECASEID = '60e6f4316ab0b5000c848c51';

@@ -6,7 +6,7 @@ namespace Devkind\RytrPhp\Endpoints\UseCases;
  * Endpoint class to get Generate a couple of sentences on any topic from WriteSonic
  * Use AI writer to quickly generate convincing short descriptions on any topic
  */
-final class ParagraphContent extends \AbstractUseCase
+final class ParagraphContent extends AbstractUseCase
 {
     public const PARAMS = ['TOPIC_LABEL'];
     public const USECASEID = '60b877a110f2fb000cb004eb';

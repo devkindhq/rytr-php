@@ -6,7 +6,7 @@ namespace Devkind\RytrPhp\Endpoints\UseCases;
  * Endpoint class to get Add a few words to increase length of a given text from WriteSonic
  * Quickly expand and lengthen your content by adding appropriate words.
  */
-final class TextExpanderAndLengthener extends \AbstractUseCase
+final class TextExpanderAndLengthener extends AbstractUseCase
 {
     public const PARAMS = ['INPUT_TEXT_LABEL'];
     public const USECASEID = '60928e45a9c7620013304f11';

@@ -6,7 +6,7 @@ namespace Devkind\RytrPhp\Endpoints\UseCases;
  * Endpoint class to get Generate Google ad copies for your product from WriteSonic
  * Write creative and original advertisement copies for responsive Google ads
  */
-final class GoogleSearchAds extends \AbstractUseCase
+final class GoogleSearchAds extends AbstractUseCase
 {
     public const PARAMS = ['PRODUCT_NAME_LABEL', 'PRODUCT_DESCRIPTION_LABEL', 'TARGET_KEYWORD_LABEL'];
     public const USECASEID = '6163f3445bb5990332c018b1';

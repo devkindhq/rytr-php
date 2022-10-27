@@ -6,7 +6,7 @@ namespace Devkind\RytrPhp\Endpoints\UseCases;
  * Endpoint class to get Generate marketing copies in AIDA format from WriteSonic
  * Use Rytr's AI copywriting software to generate creative & catchy copies in AIDA format for your product, service, company, or brand
  */
-final class CopywritingFrameworkAida extends \AbstractUseCase
+final class CopywritingFrameworkAida extends AbstractUseCase
 {
     public const PARAMS = ['PRODUCT_OR_BRAND_DESCRIPTION_LABEL'];
     public const USECASEID = '60d19b16d63485000cab8c15';

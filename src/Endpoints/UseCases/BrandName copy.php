@@ -6,7 +6,7 @@ namespace Devkind\RytrPhp\Endpoints\UseCases;
  * Endpoint class to get Generate unique names for your product or brand from WriteSonic
  * Use AI to come up with creative, quirky, and catchy names for your brand or business.
  */
-final class BrandName extends \AbstractUseCase
+final class BrandName extends AbstractUseCase
 {
     public const PARAMS = ['BRAND_DESCRIPTION_LABEL'];
     public const USECASEID = '61e0224822cc129b33031a80';

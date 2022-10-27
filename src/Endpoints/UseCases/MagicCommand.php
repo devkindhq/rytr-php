@@ -6,7 +6,7 @@ namespace Devkind\RytrPhp\Endpoints\UseCases;
  * Endpoint class to get Send custom text generation requests to AI from WriteSonic
  * Pass your request as a command and let AI do the work for you magically. Get emails, ads, posts, blogs, and more written in no time!
  */
-final class MagicCommand extends \AbstractUseCase
+final class MagicCommand extends AbstractUseCase
 {
     public const PARAMS = ['INPUT_TEXT_LABEL'];
     public const USECASEID = '60ed7113732a5b000cf99e8e';

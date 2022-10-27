@@ -6,7 +6,7 @@ namespace Devkind\RytrPhp\Endpoints\UseCases;
  * Endpoint class to get Continue Ryting from WriteSonic
  * AI writing assistant to auto write the next sentences
  */
-final class TextContinueRyting extends \AbstractUseCase
+final class TextContinueRyting extends AbstractUseCase
 {
     public const PARAMS = ['INPUT_TEXT_LABEL'];
     public const USECASEID = '6223abf9ea8eb61e65b4e691';

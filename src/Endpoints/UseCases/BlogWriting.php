@@ -6,7 +6,7 @@ namespace Devkind\RytrPhp\Endpoints\UseCases;
  * Endpoint class to get Write articles based on section topics & headlines from WriteSonic
  * Write engaging introduction and section paragraphs for your blog
  */
-final class BlogWriting extends \AbstractUseCase
+final class BlogWriting extends AbstractUseCase
 {
     public const PARAMS = ['SECTION_TOPIC_LABEL', 'SECTION_KEYWORDS_LABEL'];
     public const USECASEID = '60584cf2c2cdaa000c2a7954';

@@ -6,7 +6,7 @@ namespace Devkind\RytrPhp\Endpoints\UseCases;
  * Endpoint class to get Generate video ideas based on keywords & topics from WriteSonic
  * Let AI copywriter generate creative and interesting video ideas for your YouTube channel.
  */
-final class VideoIdeas extends \AbstractUseCase
+final class VideoIdeas extends AbstractUseCase
 {
     public const PARAMS = ['KEYWORDS_LABEL'];
     public const USECASEID = '60584ffdc2cdaa000c2a7957';

@@ -6,7 +6,7 @@ namespace Devkind\RytrPhp\Endpoints\UseCases;
  * Endpoint class to get Generate interview questions for job roles, podcasts, & shows from WriteSonic
  * Prepare thoughtful and interesting interview questions for any job, podcast, or show
  */
-final class InterviewQuestions extends \AbstractUseCase
+final class InterviewQuestions extends AbstractUseCase
 {
     public const PARAMS = ['INTERVIEWEE_BIO_LABEL', 'INTERVIEW_CONTEXT_LABEL'];
     public const USECASEID = '6058693ccdebbb000c210588';

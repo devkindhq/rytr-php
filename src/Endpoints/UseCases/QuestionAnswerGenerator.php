@@ -6,7 +6,7 @@ namespace Devkind\RytrPhp\Endpoints\UseCases;
  * Endpoint class to get Generate questions & answers based on a brief topic description from WriteSonic
  * Need to come up with questions & answers for Quora, company knowledge base, and more? Try out Rytr's AI Q&A generator.
  */
-final class QuestionAnswerGenerator extends \AbstractUseCase
+final class QuestionAnswerGenerator extends AbstractUseCase
 {
     public const PARAMS = ['TOPIC_DESCRIPTION_LABEL'];
     public const USECASEID = '611e2a98045b460ef10242ce';

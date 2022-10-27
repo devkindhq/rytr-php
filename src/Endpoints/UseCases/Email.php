@@ -6,7 +6,7 @@ namespace Devkind\RytrPhp\Endpoints\UseCases;
  * Endpoint class to get Turn a few key points into a ready to send email from WriteSonic
  * Create catchy emails for marketing, sales, engagement, & more in seconds
  */
-final class Email extends \AbstractUseCase
+final class Email extends AbstractUseCase
 {
     public const PARAMS = ['KEY_POINTS_LABEL'];
     public const USECASEID = '60572a629bdd4272b8fe3588';

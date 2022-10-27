@@ -6,7 +6,7 @@ namespace Devkind\RytrPhp\Endpoints\UseCases;
  * Endpoint class to get Generate business ideas based on your interest & skills from WriteSonic
  * Find unique startup ideas & opportunities tailored to your skills & passion
  */
-final class BusinessIdeas extends \AbstractUseCase
+final class BusinessIdeas extends AbstractUseCase
 {
     public const PARAMS = ['INTEREST_LABEL', 'SKILLS_LABEL'];
     public const USECASEID = '61e1167527174a50fdcb55e3';

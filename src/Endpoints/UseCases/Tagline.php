@@ -6,7 +6,7 @@ namespace Devkind\RytrPhp\Endpoints\UseCases;
  * Endpoint class to get Write short tagline for your product or brand from WriteSonic
  * Generate creative and catchy taglines and headlines for your LinkedIn bio, product, website, blog posts, or news articles.
  */
-final class Tagline extends \AbstractUseCase
+final class Tagline extends AbstractUseCase
 {
     public const PARAMS = ['DESCRIPTION_LABEL'];
     public const USECASEID = '605838118c0a4a000c69c968';

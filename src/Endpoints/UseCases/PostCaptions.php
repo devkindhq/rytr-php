@@ -6,7 +6,7 @@ namespace Devkind\RytrPhp\Endpoints\UseCases;
  * Endpoint class to get Generate ideas & intro text for your social media posts from WriteSonic
  * Generate engaging ideas for your Facebook, LinkedIn, and Instagram posts & captions
  */
-final class PostCaptions extends \AbstractUseCase
+final class PostCaptions extends AbstractUseCase
 {
     public const PARAMS = ['POST_TOPIC_LABEL'];
     public const USECASEID = '6062d819be972a000c6a05a3';

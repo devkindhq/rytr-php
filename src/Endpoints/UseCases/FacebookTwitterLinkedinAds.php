@@ -6,7 +6,7 @@ namespace Devkind\RytrPhp\Endpoints\UseCases;
  * Endpoint class to get Generate Ad copies for your product or brand from WriteSonic
  * Write creative and original advertisement copies for Facebook, Twitter, LinkedIn, and other social media channels.
  */
-final class FacebookTwitterLinkedinAds extends \AbstractUseCase
+final class FacebookTwitterLinkedinAds extends AbstractUseCase
 {
     public const PARAMS = ['PRODUCT_NAME_LABEL', 'PRODUCT_DESCRIPTION_LABEL'];
     public const USECASEID = '60572a629bdd4272b8fe3585';

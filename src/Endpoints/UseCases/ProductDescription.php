@@ -6,7 +6,7 @@ namespace Devkind\RytrPhp\Endpoints\UseCases;
  * Endpoint class to get Write brief description for your product or feature from WriteSonic
  * Generate compelling product descriptions to increase customer engagement & conversions for your e-commerce store or website.
  */
-final class ProductDescription extends \AbstractUseCase
+final class ProductDescription extends AbstractUseCase
 {
     public const PARAMS = ['PRODUCT_NAME_LABEL', 'ABOUT_PRODUCT_LABEL'];
     public const USECASEID = '605832f78c0a4a000c69c960';

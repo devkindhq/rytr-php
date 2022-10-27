@@ -6,7 +6,7 @@ namespace Devkind\RytrPhp\Endpoints\UseCases;
  * Endpoint class to get Generate SEO-friendly meta description for the page from WriteSonic
  * Write SEO optimized meta description content for any page, blog, or website
  */
-final class SeoDescription extends \AbstractUseCase
+final class SeoDescription extends AbstractUseCase
 {
     public const PARAMS = ['PAGE_META_TITLE_LABEL'];
     public const USECASEID = '60583ac98c0a4a000c69c96f';
