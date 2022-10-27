@@ -13,8 +13,6 @@ final class BrandName extends AbstractUseCase
     public const USECASEID = '61e0224822cc129b33031a80';
     public const PARAMS = ['BRAND_DESCRIPTION_LABEL'];
 
-    /** @var array */
-    protected array $payload =[];
 
     /** @var string */
     protected string $brand_description;
@@ -49,26 +47,6 @@ final class BrandName extends AbstractUseCase
         return $this;
     }
 
-    /**
-     * Accessor for Payload attribute
-     *
-     * @return array
-     */
-    public function getPayload(): array
-    {
-        return $this->payload;
-    }
-
-    /**
-     * Setter for payload attribute
-     *
-     * @return self
-     */
-    public function setPayload(array $value): self
-    {
-        $this->payload = $value;
-        return $this;
-    }
 
     /**
      * Accessor for endpoint attribute
