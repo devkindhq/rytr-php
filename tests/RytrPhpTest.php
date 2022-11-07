@@ -85,22 +85,49 @@ final class RytrPhpTest extends TestCase
             $object  =  new RytrPhp('test');
             /** @var \Devkind\RytrPhp\Endpoints\UseCases\BrandName */
             $endpoint = $object->BrandName;
-            
+
             $endpoint = $endpoint
-            ->setBrandDescription("google")
-            ->setVariations(10)
-            ->setUserId(100)
-            ->setFormat('html')
-            ->setCreativityLevel('medium')
-            ->get();
+                ->setBrandDescription("google")
+                ->setVariations(10)
+                ->setUserId(100)
+                ->setFormat('html')
+                ->setCreativityLevel('medium')
+                ->get();
             $this->assertTrue(is_array($endpoint));
         } catch (\Throwable $th) {
-            var_export($th->getMessage()); echo PHP_EOL; die;
             $this->assertTrue(get_class($th) == \GuzzleHttp\Exception\ClientException::class);
         }
-    }  
-    
+    }
+    /**
+     * @test
+     */
+    public function apiWorksFineWithGenenrateFunction(): void
+    {
+        try {
+            $object  =  new RytrPhp('test');
+            /** @var \Devkind\RytrPhp\Endpoints\UseCases\BrandName */
+            $endpoint = $object->BrandName;
+
+            $endpoint = $endpoint->generate("google");
+            $this->assertTrue(is_array($endpoint));
+        } catch (\Throwable $th) {
+            $this->assertTrue(get_class($th) == \GuzzleHttp\Exception\ClientException::class);
+        }
+    }
+    /**
+     * @test
+     */
+    public function apiWorksFineWithGetFunction(): void
+    {
+        try {
+            $object  =  new RytrPhp('test');
+            /** @var \Devkind\RytrPhp\Endpoints\UseCases\BrandName */
+            $endpoint = $object->BrandName;
+
+            $endpoint = $endpoint->get(['brandDescription' => "google"]);
+            $this->assertTrue(is_array($endpoint));
+        } catch (\Throwable $th) {
+            $this->assertTrue(get_class($th) == \GuzzleHttp\Exception\ClientException::class);
+        }
+    }
 }
-
-
-

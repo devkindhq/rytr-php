@@ -237,7 +237,7 @@ abstract class AbstractUseCase extends Endpoint
             $value[$key] = isset($value[$key]) ? $value[$key] : $payload[$key];
         }
 
-        return $value;         
+        return $value;
     }
 
     /**
