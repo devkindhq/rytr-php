@@ -209,15 +209,10 @@ abstract class AbstractUseCase extends Endpoint
 
     public function get(?array $payload = [])
     {
-        $payload = count($payload) == 0 ? $this->payload : $payload;
-        $payload = count($payload) == 0 ? $this->getInputContexts() : $payload;
-
-        if (is_null($payload) || count($payload) == 0) {
-            throw new \InvalidArgumentException("Payload is required to make a call.");
-        }
 
         $payload = $this->makePayload($payload);
 
+        var_export($payload);
         if (count(array_intersect_key(array_flip($this->getParams()), $payload['inputContexts'])) !== count($this->getParams())) {
             throw new \InvalidArgumentException(implode(",", array_diff($this->getParams(), array_keys($payload))) . "are missing in the payload");
         }
@@ -229,16 +224,30 @@ abstract class AbstractUseCase extends Endpoint
         );
     }
 
-    private function makePayload(array $value)
+    private function makePayload(?array $payload = [])
     {
-        $payload = $this->toArray();
-
-        foreach (array_keys($payload) as $key) {
-            $value[$key] = isset($value[$key]) ? $value[$key] : $payload[$key];
+        if(count($payload) > 0){
+            foreach ($payload as $key => $value) { 
+                $this->{$key} = $value;
+            }
         }
 
-        return $value;
+        $payload = count($payload) == 0 ? $this->getInputContexts() : $payload;
+
+        if (is_null($payload) || count($payload) == 0) {
+            throw new \InvalidArgumentException("Payload is required to make a call.");
+        }
+
+        $body = $this->toArray();
+
+        foreach (array_keys($body) as $key) {
+            $payload[$key] = isset($payload[$key]) ? $payload[$key] : $body[$key];
+        }
+
+        return $payload;
+
     }
+
 
     /**
      * Array representation of this endpoint
