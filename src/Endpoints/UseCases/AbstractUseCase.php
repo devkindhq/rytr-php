@@ -212,7 +212,6 @@ abstract class AbstractUseCase extends Endpoint
 
         $payload = $this->makePayload($payload);
 
-        var_export($payload);
         if (count(array_intersect_key(array_flip($this->getParams()), $payload['inputContexts'])) !== count($this->getParams())) {
             throw new \InvalidArgumentException(implode(",", array_diff($this->getParams(), array_keys($payload))) . "are missing in the payload");
         }
@@ -224,6 +223,12 @@ abstract class AbstractUseCase extends Endpoint
         );
     }
 
+    /**
+     * helper function to vlaidate and make payload for HTTP call
+     *
+     * @param array|null $payload
+     * @return array
+     */
     private function makePayload(?array $payload = [])
     {
         if(count($payload) > 0){
@@ -247,7 +252,6 @@ abstract class AbstractUseCase extends Endpoint
         return $payload;
 
     }
-
 
     /**
      * Array representation of this endpoint

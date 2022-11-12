@@ -16,7 +16,7 @@ use Devkind\RytrPhp\Rytr as RytrPhp;
  * @property array payload
  * @property RytrPhp client
  */
-class Endpoint  
+class Endpoint
 {
 
     /** @var array */
@@ -66,7 +66,7 @@ class Endpoint
     }
 
     /**
-     * Get the value of language
+     * perform HTTP call.
      */
     public function request(string $method, string $endpoint, string $parameters)
     {
@@ -87,13 +87,6 @@ class Endpoint
     {
         $payload = count($payload) == 0 ? $this->payload : $payload;
         $payload = count($payload) == 0 ? json_decode($this->toString(), true) : $payload;
-        // if (is_null($payload) || count($payload) == 0) {
-        //     throw new \InvalidArgumentException("Payload is required to make a call.");
-        // }
-
-        // if (count(array_intersect_key(array_flip($this->getParams()), $payload)) !== count($this->getParams())) {
-        //     throw new \InvalidArgumentException(implode(",", array_diff($this->getParams(), array_keys($payload))) . "are missing in the payload");
-        // }
 
         return $this->request($this->getMethod(), $this->getEndpoint(), json_encode($payload));
     }
