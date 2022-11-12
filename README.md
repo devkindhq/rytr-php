@@ -1,5 +1,9 @@
 # PHP client to communicate with Rytr API
 
+
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/devkind/rytr-php.svg?style=flat-square)](https://packagist.org/packages/devkind/rytr-php)
+[![Total Downloads](https://img.shields.io/packagist/dt/devkind/rytr-php.svg?style=flat-square)](https://packagist.org/packages/devkind/rytr-php)
+
 ![GitHub Actions](https://github.com/devkindhq/rytr-php/actions/workflows/main.yml/badge.svg)
 
 RytrPhp is a simple SDK implementation of Rytr API. It helps accessing the API in an object oriented way.
