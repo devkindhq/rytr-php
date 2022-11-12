@@ -142,11 +142,13 @@ $endpoint = $endpoint->generate("google");
 #### [Click here ](https://github.com/devkindhq/rytr-php/blob/main/endpoints.md) to view the entire documentation of supported endpoints
 
 
-```### Testing
+### Testing
 
 ```bash
 composer test
 ```
+
+
 ### Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
