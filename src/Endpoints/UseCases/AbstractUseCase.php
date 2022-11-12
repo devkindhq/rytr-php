@@ -5,6 +5,7 @@ namespace Devkind\RytrPhp\Endpoints\UseCases;
 use InvalidArgumentException;
 use Devkind\RytrPhp\Endpoints\Endpoint;
 use Devkind\RytrPhp\ILanguages;
+use Devkind\RytrPhp\ITones;
 
 /**
  * Endpoint class to get Google Ads from Rytr
@@ -76,20 +77,20 @@ abstract class AbstractUseCase extends Endpoint
      */
     public function setLanguage($value = 'en')
     {
-        if (!in_array($value, ILanguages::LANGUAGES)) {
-            throw new InvalidArgumentException("Invalid language given, language could be one of " . implode(', ', ILanguages::LANGUAGES));
+        if (!in_array($value, array_keys(ILanguages::LANGUAGES))) {
+            throw new InvalidArgumentException("Invalid language given, language could be one of " . implode(', ', array_keys(ILanguages::LANGUAGES)));
         }
-        $this->language = $value;
+        $this->language = ILanguages::LANGUAGES[$value]['id'];
         return;
     }
 
     /**
      * set the value of tone
      */
-    public function setTone($value = 'economy')
+    public function setTone($value = 'candid')
     {
-        if (!in_array($value, ['economy', 'business'])) {
-            throw new InvalidArgumentException("Invalid language given, language could be one of " . implode(', ', ['economy', 'business']));
+        if (!in_array($value, array_keys(ITones::TONES))) {
+            throw new InvalidArgumentException("Invalid tone given, tone could be one of " . implode(', ', array_keys(ITones::TONES)));
         }
 
         $this->tone = $value;

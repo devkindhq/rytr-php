@@ -547,10 +547,10 @@ Have a great day!",
                     [
                         "label" => "Product features",
                         "placeholder" => "- best language AI technology
-- many copywriting templates & tones
-- simple, one-page app layout
-- fully mobile compatible
-- only costs a few dollars",
+                        - many copywriting templates & tones
+                        - simple, one-page app layout
+                        - fully mobile compatible
+                        - only costs a few dollars",
                         "keyLabel" => "PRODUCT_FEATURES_LABEL",
                         "inputType" => "textarea",
                         "inputMaximumCharacters" => 250,
