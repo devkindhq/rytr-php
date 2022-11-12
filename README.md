@@ -10,7 +10,11 @@ Oficial Rytr-me git documentation: https://github.com/rytr-me/documentation
 
 ### Getting the API key
 
-please register an account and request an api key at [Rytr](https://rytr.me). `<br/>` Please check out the tutorials section for more information`<br/>`   `<ul>` `<li>` [Find your API key](https://rytr.me/developers/api) `</li>`  `</ul>`
+please register an account and request an api key at [Rytr](https://rytr.me).
+
+Please check out the tutorials section for more information
+- [Find your API key](https://rytr.me/developers/api) 
+
 
 ## Installation
 
@@ -46,31 +50,25 @@ Each endpoint requireds an `$tone` and `$language` parameter to query from rytr.
 
 ### Defaults
 
->    /** @var string $language */
 >    protected $language = '607adac76f8fe5000c1e636d'; //english
 
 ```language="🇺🇸 English"``` - language in which the texts will be generated - **change using setLangugage()**
 
->    /** @var string $language */
 >    protected $language = '607adac76f8fe5000c1e636d'; //english
 
 ```tone="Casual"``` - tones in which the text will be - **change using setTone()**
 
->    /** @var int $variations */
 >    protected int $variations = 1;
 
 ```variations = 1``` - number of texts in response - **change using setVariation()**
 
->    /** @var string $format */
 >    protected string $format = 'text';
 
 ```formats='html'``` - html or text - ** **change using setFormat()****
 
->    /** @var string $creativityLevel */
 >    protected string $creativityLevel = 'default';
 
 ```creativity_level='default'``` - fault | none | low | medium | high | max - **change using setCreativityLevel()**
-
 
 
 ```user_id='USER1'``` - "*For userId you need to supply user ID from your database, eg: primary key for users database table.*" -  **change using setUserId()**
@@ -82,21 +80,21 @@ to set the language
 
 ```php
 /** @var \Devkind\RytrPhp\Endpoints\Usercases\BrandName */
-$endpoint = $rytr->BrandName->setLanguage('607adac76f8fe5000c1e636d');
+$endpoint = $rytr->BrandName->setLanguage('english');
 ```
 
 to set the tone
 
 ```php
 /** @var \Devkind\RytrPhp\Endpoints\Usercases\BrandName */
-$endpoint = $rytr->BrandName->setTone(\Devkind\RytrPhp\ITones::TONES['candid']);
+$endpoint = $rytr->BrandName->setTone('candid');
 ```
 
 alternatively:
 
 ```php
 /** @var \Devkind\RytrPhp\Endpoints\Usercases\BrandName */
-$endpoint = $rytr->BrandName->setTone('br')->setLanguage('br');
+$endpoint = $rytr->BrandName->setTone('candid')->setLanguage('english')->setVariation(10);
 ```
 
 All the endpoints can be  called into three different ways
