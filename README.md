@@ -130,7 +130,6 @@ $endpoint = $endpoint
 $endpoint = $object->BrandName;
 
 $endpoint = $endpoint->generate("google");
-$this->assertTrue(is_array($endpoint));
 ```
 
 
