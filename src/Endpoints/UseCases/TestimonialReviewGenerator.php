@@ -34,7 +34,7 @@ final class TestimonialReviewGenerator extends AbstractUseCase
      */
     public function getName(): string
     {
-        return $this->name;
+        return $this->name ?? $this->name_label ?? null;
     }
 
     /**
@@ -55,7 +55,7 @@ final class TestimonialReviewGenerator extends AbstractUseCase
      */
     public function getReviewTitle(): string
     {
-        return $this->reviewTitle;
+        return $this->reviewTitle ?? $this->review_title_label ?? null;
     }
 
     /**

@@ -38,7 +38,7 @@ final class WebsiteLandingPage extends AbstractUseCase
      */
     public function getWebsiteName(): string
     {
-        return $this->websiteName;
+        return $this->websiteName ?? $this->website_name_label ?? null;
     }
 
     /**
@@ -59,7 +59,7 @@ final class WebsiteLandingPage extends AbstractUseCase
      */
     public function getAboutWebsite(): string
     {
-        return $this->aboutWebsite;
+        return $this->aboutWebsite ?? $this->about_website_label ?? null;
     }
 
     /**
@@ -80,7 +80,7 @@ final class WebsiteLandingPage extends AbstractUseCase
      */
     public function getFeatures(): string
     {
-        return $this->features;
+        return $this->features ?? $this->features_label ?? null;
     }
 
     /**

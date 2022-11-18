@@ -30,7 +30,7 @@ final class BlogIdeaOutline extends AbstractUseCase
      */
     public function getPrimaryKeyword(): string
     {
-        return $this->primaryKeyword;
+        return $this->primaryKeyword ?? $this->primary_keyword_label ?? null;
     }
 
     /**

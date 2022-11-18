@@ -30,7 +30,7 @@ final class ParagraphContent extends AbstractUseCase
      */
     public function getTopic(): string
     {
-        return $this->topic;
+        return $this->topic ?? $this->topic_label ?? null;
     }
 
     /**

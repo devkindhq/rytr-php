@@ -34,7 +34,7 @@ final class BlogWriting extends AbstractUseCase
      */
     public function getSectionTopic(): string
     {
-        return $this->sectionTopic;
+        return $this->sectionTopic ?? $this->section_topic_label ?? null;
     }
 
     /**
@@ -55,7 +55,8 @@ final class BlogWriting extends AbstractUseCase
      */
     public function getSectionKeywords(): string
     {
-        return $this->sectionKeywords;
+        return $this->sectionKeywords ?? $this->section_keywords_label ?? null;
+
     }
 
     /**

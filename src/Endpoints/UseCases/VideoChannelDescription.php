@@ -30,7 +30,7 @@ final class VideoChannelDescription extends AbstractUseCase
      */
     public function getChannelPurpose(): string
     {
-        return $this->channelPurpose;
+        return $this->channelPurpose ?? $this->channel_purpose_label ?? null;
     }
 
     /**

@@ -38,7 +38,7 @@ final class GoogleSearchAds extends AbstractUseCase
      */
     public function getProductName(): string
     {
-        return $this->productName;
+        return $this->productName ?? $this->product_name_label ?? null;
     }
 
     /**
@@ -59,7 +59,7 @@ final class GoogleSearchAds extends AbstractUseCase
      */
     public function getProductDescription(): string
     {
-        return $this->productDescription;
+        return $this->productDescription ?? $this->product_description_label ?? null;
     }
 
     /**
@@ -80,7 +80,7 @@ final class GoogleSearchAds extends AbstractUseCase
      */
     public function getTargetKeyword(): string
     {
-        return $this->targetKeyword;
+        return $this->targetKeyword ?? $this->target_keyword_label ?? null;
     }
 
     /**

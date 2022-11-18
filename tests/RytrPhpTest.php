@@ -4,6 +4,7 @@ namespace Devkind\RytrPhp\Tests;
 
 use Devkind\RytrPhp\Endpoints\Tones;
 use Devkind\RytrPhp\Rytr as RytrPhp;
+use Devkind\RytrPhp\Util;
 use PHPUnit\Framework\TestCase;
 use RuntimeException;
 
@@ -120,11 +121,13 @@ final class RytrPhpTest extends TestCase
     public function apiWorksFineWithGetFunction(): void
     {
         try {
+
             $object  =  new RytrPhp('test');
+
             /** @var \Devkind\RytrPhp\Endpoints\UseCases\BrandName */
             $endpoint = $object->BrandName;
 
-            $endpoint = $endpoint->get(['brandDescription' => "google"]);
+            $endpoint = $endpoint->get(['brand_description_label' => "google"]);
             $this->assertTrue(is_array($endpoint));
         } catch (\Throwable $th) {
             $this->assertTrue(get_class($th) == \GuzzleHttp\Exception\ClientException::class);

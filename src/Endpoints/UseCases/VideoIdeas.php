@@ -30,7 +30,7 @@ final class VideoIdeas extends AbstractUseCase
      */
     public function getKeywords(): string
     {
-        return $this->keywords;
+        return $this->keywords ?? $this->keywords_label ?? null;
     }
 
     /**

@@ -30,7 +30,8 @@ final class SmsNotifications extends AbstractUseCase
      */
     public function getContext(): string
     {
-        return $this->context;
+        return $this->context ?? $this->context_label ?? null;
+
     }
 
     /**

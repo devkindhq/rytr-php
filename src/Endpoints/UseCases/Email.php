@@ -30,7 +30,8 @@ final class Email extends AbstractUseCase
      */
     public function getKeyPoints(): string
     {
-        return $this->keyPoints;
+        return $this->keyPoints ?? $this->key_points_label ?? null;
+
     }
 
     /**

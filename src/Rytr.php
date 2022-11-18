@@ -72,6 +72,21 @@ class Rytr extends Client
     }
 
     /**
+     * @return string
+     */
+    public function usecase(string $id)
+    {
+        $endpoint = ucfirst(Util::camel(IUsecases::USECASES['data'][$id]['slug']));
+        $className = "Devkind\\RytrPhp\\Endpoints\\UseCases\\" . $endpoint;
+        if (class_exists($className)) {
+            return new $className($this);
+        }
+
+        // If user tries to access property that doesn't exist, scold them.
+        throw new \RuntimeException('Property does not exist on API');
+    }
+
+    /**
      * @param string|null $base
      *
      * @return $this

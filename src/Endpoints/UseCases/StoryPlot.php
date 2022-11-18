@@ -30,7 +30,7 @@ final class StoryPlot extends AbstractUseCase
      */
     public function getStoryIdea(): string
     {
-        return $this->storyIdea;
+        return $this->storyIdea ?? $this->story_idea_label ?? null;
     }
 
     /**

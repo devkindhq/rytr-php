@@ -30,7 +30,8 @@ final class QuestionAnswerGenerator extends AbstractUseCase
      */
     public function getTopicDescription(): string
     {
-        return $this->topicDescription;
+        return $this->topicDescription ?? $this->topic_description_label ?? null;
+
     }
 
     /**

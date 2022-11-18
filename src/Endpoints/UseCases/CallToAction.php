@@ -30,7 +30,7 @@ final class CallToAction extends AbstractUseCase
      */
     public function getDescription(): string
     {
-        return $this->description;
+        return $this->description ?? $this->description_label ?? null;
     }
 
     /**

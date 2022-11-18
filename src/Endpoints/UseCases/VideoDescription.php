@@ -30,7 +30,7 @@ final class VideoDescription extends AbstractUseCase
      */
     public function getVideoTitle(): string
     {
-        return $this->videoTitle;
+        return $this->videoTitle ?? $this->video_title_label ?? null;
     }
 
     /**

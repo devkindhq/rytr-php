@@ -30,7 +30,7 @@ final class BrandName extends AbstractUseCase
      */
     public function getBrandDescription(): string
     {
-        return $this->brandDescription;
+        return $this->brandDescription ?? $this->brand_description_label ?? null;
     }
 
     /**

@@ -34,7 +34,7 @@ final class InterviewQuestions extends AbstractUseCase
      */
     public function getIntervieweeBio(): string
     {
-        return $this->intervieweeBio;
+        return $this->intervieweeBio ?? $this->interviewee_bio_label ?? null;        
     }
 
     /**
@@ -55,7 +55,7 @@ final class InterviewQuestions extends AbstractUseCase
      */
     public function getInterviewContext(): string
     {
-        return $this->interviewContext;
+        return $this->interviewContext ?? $this->interview_context_label ?? null;        
     }
 
     /**

@@ -34,7 +34,7 @@ final class FacebookTwitterLinkedinAds extends AbstractUseCase
      */
     public function getProductName(): string
     {
-        return $this->productName;
+        return $this->productName ?? $this->product_name_label ?? null;
     }
 
     /**
@@ -55,7 +55,8 @@ final class FacebookTwitterLinkedinAds extends AbstractUseCase
      */
     public function getProductDescription(): string
     {
-        return $this->productDescription;
+        return $this->productDescription ?? $this->product_description_label ?? null;
+
     }
 
     /**

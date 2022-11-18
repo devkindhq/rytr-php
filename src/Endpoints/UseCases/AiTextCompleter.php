@@ -30,7 +30,7 @@ final class AiTextCompleter extends AbstractUseCase
      */
     public function getInputText(): string
     {
-        return $this->inputText;
+        return $this->inputText ?? $this->input_text_label ?? null;
     }
 
     /**

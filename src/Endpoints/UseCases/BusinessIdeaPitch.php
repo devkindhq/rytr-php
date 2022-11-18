@@ -30,7 +30,8 @@ final class BusinessIdeaPitch extends AbstractUseCase
      */
     public function getBusinessIdea(): string
     {
-        return $this->businessIdea;
+        return $this->businessIdea ?? $this->business_idea_label ?? null;
+
     }
 
     /**

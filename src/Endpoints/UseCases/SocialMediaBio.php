@@ -30,7 +30,8 @@ final class SocialMediaBio extends AbstractUseCase
      */
     public function getAboutYou(): string
     {
-        return $this->aboutYou;
+        return $this->aboutYou ?? $this->about_you_label ?? null;
+
     }
 
     /**

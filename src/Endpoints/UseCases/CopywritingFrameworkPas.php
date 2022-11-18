@@ -30,7 +30,7 @@ final class CopywritingFrameworkPas extends AbstractUseCase
      */
     public function getProductOrBrandDescription(): string
     {
-        return $this->productOrBrandDescription;
+        return $this->productOrBrandDescription ?? $this->product_or_brand_description_label ?? null;
     }
 
     /**

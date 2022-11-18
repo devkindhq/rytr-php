@@ -34,7 +34,7 @@ final class ProductDescriptionBullets extends AbstractUseCase
      */
     public function getProductName(): string
     {
-        return $this->productName;
+        return $this->productName ?? $this->product_name_label ?? null;
     }
 
     /**
@@ -55,7 +55,7 @@ final class ProductDescriptionBullets extends AbstractUseCase
      */
     public function getProductFeatures(): string
     {
-        return $this->productFeatures;
+        return $this->productFeatures ?? $this->product_features_label ?? null;
     }
 
     /**

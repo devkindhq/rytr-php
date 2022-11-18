@@ -30,7 +30,8 @@ final class ReplyResponseGenerator extends AbstractUseCase
      */
     public function getMessage(): string
     {
-        return $this->message;
+        return $this->message ?? $this->message_label ?? null;
+
     }
 
     /**

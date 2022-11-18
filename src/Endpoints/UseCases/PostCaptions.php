@@ -30,7 +30,7 @@ final class PostCaptions extends AbstractUseCase
      */
     public function getPostTopic(): string
     {
-        return $this->postTopic;
+        return $this->postTopic ?? $this->post_topic_label ?? null;
     }
 
     /**

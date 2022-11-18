@@ -30,7 +30,7 @@ final class SeoTitle extends AbstractUseCase
      */
     public function getTargetKeywords(): string
     {
-        return $this->targetKeywords;
+        return $this->targetKeywords ?? $this->target_keywords_label ?? null;
     }
 
     /**

@@ -34,7 +34,7 @@ final class BusinessIdeas extends AbstractUseCase
      */
     public function getInterest(): string
     {
-        return $this->interest;
+        return $this->interest ?? $this->interest_label ?? null ;;
     }
 
     /**
@@ -55,7 +55,7 @@ final class BusinessIdeas extends AbstractUseCase
      */
     public function getSkills(): string
     {
-        return $this->skills;
+        return $this->skills ?? $this->skills_label ?? null ;
     }
 
     /**

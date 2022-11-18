@@ -30,7 +30,8 @@ final class SeoDescription extends AbstractUseCase
      */
     public function getPageMetaTitle(): string
     {
-        return $this->pageMetaTitle;
+        return $this->pageMetaTitle ?? $this->page_meta_title_label ?? null;
+
     }
 
     /**

@@ -30,7 +30,7 @@ final class SongLyrics extends AbstractUseCase
      */
     public function getSongIdea(): string
     {
-        return $this->songIdea;
+        return $this->songIdea ?? $this->song_idea_label ?? null;
     }
 
     /**

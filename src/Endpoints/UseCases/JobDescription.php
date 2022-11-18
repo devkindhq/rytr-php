@@ -30,7 +30,7 @@ final class JobDescription extends AbstractUseCase
      */
     public function getJobRole(): string
     {
-        return $this->jobRole;
+        return $this->jobRole ?? $this->job_role_label ?? null;        
     }
 
     /**
